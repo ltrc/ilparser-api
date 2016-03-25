@@ -1,0 +1,24 @@
+[submodule "lib/hin/morph"]
+	path = lib/hin/morph
+	url = https://github.com/ltrc/hin-morph-analyser.git
+[submodule "lib/hin/pruning"]
+	path = lib/hin/pruning
+	url = https://github.com/ltrc/hin-pruning.git
+[submodule "lib/hin/postagger"]
+	path = lib/hin/postagger
+	url = https://github.com/ltrc/hin-POS-tagger.git
+[submodule "lib/hin/chunker"]
+	path = lib/hin/chunker
+	url = https://github.com/ltrc/hin-chunker.git
+[submodule "lib/hin/guessmorph"]
+	path = lib/hin/guessmorph
+	url = https://github.com/ltrc/hin-guess-morph.git
+[submodule "lib/common/pickonemorph"]
+	path = lib/common/pickonemorph
+	url = https://github.com/ltrc/pick-one-morph.git
+[submodule "lib/common/computehead"]
+	path = lib/common/computehead
+	url = https://github.com/ltrc/perl-head-computation
+[submodule "lib/common/computevibhakti"]
+	path = lib/common/computevibhakti
+	url = https://github.com/ltrc/vibhakti-computation
