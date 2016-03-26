@@ -23,7 +23,9 @@ $ perl api.pl prefork
 
 Example use of the API:
 ```bash
-$c burl -s localhost:3000/parse --data lang=hin --data data="माना जाता है कि अमृतमंथन के बाद अमृत की कुछ बूँदें यहाँ गिरी थीं , इसलिए इसे ब्रह्मकुंड कहा जाता है ." | jq '.["dependencyparse-11"]' | sed -e 's/\\t/\t/g' -e 's/\\n/\n/g'  -e 's/\\"/\"/g' -e 's/^"//' -e 's/"$//'
+$ curl -s localhost:3000/parse --data lang=hin --data data="माना जाता है कि अमृतमंथन के बाद अमृत की कुछ बूँदें यहाँ गिरी थीं , इसलिए इसे ब्रह्मकुंड कहा जाता है ." | \
+jq '.["dependencyparse-11"]' | \
+sed -e 's/\\t/\t/g' -e 's/\\n/\n/g'  -e 's/\\"/\"/g' -e 's/^"//' -e 's/"$//'
 1	माना	मान	v	VM	case-|vib-या_जा+ता_है|psd-|chunkId-VGF|pers-2|num-sg|tam-yA|sem-|cp-|gen-m	0	root	_	_
 2	जाता	जा	v	VAUX	case-|vib-ता|psd-|chunkId-VGF|pers-any|num-sg|tam-wA|sem-|cp-|gen-m	1	lwg__vaux	_	_
 3	है	है	v	VAUX	case-|vib-है|psd-|chunkId-VGF|pers-2|num-sg|tam-hE|sem-|cp-|gen-any	1	lwg__vaux	_	_
