@@ -2,12 +2,13 @@ package hin;
 use Dir::Self;
 use Data::Dumper;
 use hin::chunker;
+use hin::dependencyparse;
 use hin::guessmorph;
 use hin::indic_wx_converter;
 use hin::morph;
+use hin::pruning;
 use hin::postagger;
 use hin::tokenizer;
-use hin::pruning;
 use List::Util qw(pairs);
 use strict;
 use warnings;
@@ -28,7 +29,8 @@ my @dispatch_seq = (
     "guessmorph",
     "pickonemorph",
     "computehead",
-    "computevibhakti"
+    "computevibhakti",
+    "dependencyparse"
 );
 
 sub init {
