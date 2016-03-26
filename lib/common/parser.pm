@@ -1,8 +1,11 @@
-package ilparser;
+package common::parser;
 use Config::IniFiles;
 use Data::Dumper;
 use strict;
 use warnings;
+use Exporter qw(import);
+
+our @EXPORT_OK = qw(get_parser initialize_langs);
 
 my %parser_table;
 

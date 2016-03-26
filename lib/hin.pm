@@ -8,15 +8,15 @@ use hin::morph;
 use hin::postagger;
 use hin::tokenizer;
 use hin::pruning;
-use ilparser;
 use List::Util qw(pairs);
 use strict;
 use warnings;
+use common::parser;
 use common::pickonemorph;
 use common::computehead;
 use common::computevibhakti;
 
-my $langobj = new_parser ilparser("hin", __PACKAGE__);
+my $langobj = new_parser common::parser("hin", __PACKAGE__);
 
 my @dispatch_seq = (
     "tokenizer",
