@@ -47,7 +47,7 @@ sub parse {
     $args{"langobj"} = $langobj;
     my %final_result;
     foreach my $index (0 .. $#dispatch_seq) {
-        my $module = $dispatch_seq[$index];
+        my $module = $dispatch_seq[$index ++];
         my $identifier = "${module}-$index";
         $final_result{$identifier} = __PACKAGE__->can($module)->(%args);
         $args{'data'} = $final_result{$identifier};
