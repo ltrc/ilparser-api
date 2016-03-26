@@ -22,3 +22,12 @@
 [submodule "lib/common/computevibhakti"]
 	path = lib/common/computevibhakti
 	url = https://github.com/ltrc/vibhakti-computation
+[submodule "lib/common/indic-wx-converter"]
+	path = lib/common/indic-wx-converter
+	url = https://github.com/ltrc/indic-wx-converter
+[submodule "lib/common/indic-tokenizer"]
+	path = lib/common/indic-tokenizer
+	url = https://github.com/ltrc/indic-tokenizer
+[submodule "lib/common/ilparser"]
+	path = lib/common/ilparser
+	url = https://bitbucket.org/riyazbhat/ilparser/
