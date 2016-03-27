@@ -69,3 +69,5 @@ sed -e 's/\\t/\t/g' -e 's/\\n/\n/g'  -e 's/\\"/\"/g' -e 's/^"//' -e 's/"$//'
 Querying the API through browser:
 
 ![GoogleChromeILParserAPI](https://cloud.githubusercontent.com/assets/1779189/14066994/6e405a26-f477-11e5-8d6d-ed26bf3a7f2c.png)
+
+In case of port conflicts, edit the file(s): `./lib/${lang}/daemons.ini`
