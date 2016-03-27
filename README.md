@@ -27,8 +27,9 @@ $ echo "/usr/local" | sudo tee /etc/ld.so.conf.d/crfpp.conf
 $ sudo ldconfig
 ```
 
-To setup the repo after installing dependencies, do:
+Setting up the repo:
 ```bash
+$ git clone https://github.com/ltrc/ilparser-api.git
 $ ./setup.sh
 ```
 
