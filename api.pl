@@ -15,9 +15,18 @@ any '/parse' => sub {
     my %args = %{$c->req->params->to_hash};
     my $parser = get_parser($lang);
     my $final_result = $parser->parse(%args);
-    $c->render(json => $final_result);
+    if (exists $args{"pretty"}) {
+        my $final_string = join "\n", map { "$_:\n$final_result->{$_}\n" } keys %$final_result;
+        $c->render(template => 'pretty', result => $final_string);
+    } else {
+        $c->render(json => $final_result);
+    }
 };
 
 initialize_langs();
 
 app->start;
+__DATA__
+
+@@ pretty.html.ep
+<pre><%= $result %></pre>
