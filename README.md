@@ -66,3 +66,6 @@ sed -e 's/\\t/\t/g' -e 's/\\n/\n/g'  -e 's/\\"/\"/g' -e 's/^"//' -e 's/"$//'
 21	है	है	v	VAUX	case-|vib-है|psd-|chunkId-VGF3|pers-2|num-sg|tam-hE|sem-|cp-|gen-any	19	lwg__vaux	_	_
 22	.	.	punc	SYM	case-|vib-|psd-|chunkId-BLK|pers-|num-|tam-|sem-|cp-|gen-	1	rsym	_	_
 ```
+Querying the API through browser:
+
+![GoogleChromeILParserAPI](https://cloud.githubusercontent.com/assets/1779189/14066994/6e405a26-f477-11e5-8d6d-ed26bf3a7f2c.png)
