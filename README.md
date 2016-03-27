@@ -18,6 +18,15 @@ Installing Perl Dependencies:
 $ cpanm Data::Dumper Dir::Self IPC::Run List::Util Config::IniFiles Mojolicious::Lite
 ```
 
+Install CRF++
+```bash
+$ wget https://github.com/ltrc/ilparser-api/releases/download/0.1/CRF.-0.58.tar.gz
+$ cd CRF++-0.58
+$ ./configure ; sudo make install
+$ echo "/usr/local" | sudo tee /etc/ld.so.conf.d/crfpp.conf
+$ sudo ldconfig
+```
+
 To setup the repo after installing dependencies, do:
 ```bash
 $ ./setup.sh
