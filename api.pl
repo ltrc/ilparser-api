@@ -1,3 +1,4 @@
+#!/usr/bin/env perl
 use Dir::Self;
 use lib __DIR__ . "/lib";
 use Data::Dumper;
