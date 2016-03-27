@@ -1,6 +1,6 @@
 #!/bin/bash
 
-git submodule foreach --recursive git submodule update --init
+git submodule update --recursive --init
 git submodule foreach --recursive git pull origin master
 
 sudo pip install -U ./lib/common/indic-wx-converter
