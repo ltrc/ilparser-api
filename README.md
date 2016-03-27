@@ -3,12 +3,14 @@ An API for Parsing Indic Languages
 
 Installing Dependencies (Ubuntu):
 ```bash
-$ sudo apt-get install cpanminus gcc git libgdbm-dev libglib2.0-dev make python-numpy python-pydot python-urllib3
+$ sudo apt-get install cpanminus gcc git libgdbm-dev libglib2.0-dev make python-numpy \
+  python-pydot python-urllib3 python-pip
 ```
 
 Installing Dependencies (Fedora):
 ```bash
-$ sudo dnf install perl-App-cpanminus git gcc gdbm-devel glib2-devel make numpy pydot python-urllib3
+$ sudo dnf install perl-App-cpanminus git gcc gdbm-devel glib2-devel make numpy pydot \
+  python-urllib3 python-pip
 ```
 
 Installing Perl Dependencies:
