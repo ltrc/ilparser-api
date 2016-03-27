@@ -67,8 +67,12 @@ $ curl -s localhost:3000/parse --data lang=hin \
 21	है	है	v	VAUX	case-|vib-है|psd-|chunkId-VGF3|pers-2|num-sg|tam-hE|sem-|cp-|gen-any	19	lwg__vaux	_	_
 22	.	.	punc	SYM	case-|vib-|psd-|chunkId-BLK|pers-|num-|tam-|sem-|cp-|gen-	1	rsym	_	_
 ```
-Querying the API through browser:
+Querying the API through browser (using a JSON plugin):
 
 ![GoogleChromeILParserAPI](https://cloud.githubusercontent.com/assets/1779189/14066994/6e405a26-f477-11e5-8d6d-ed26bf3a7f2c.png)
+
+Querying the API through browser (♥ pretty print!):
+Enter into the browser: `http://localhost:3000/parse?lang=hin&data=देश के टूरिजम में राजस्थान&pretty`
+![PrettyPrint](https://cloud.githubusercontent.com/assets/1779189/14067826/0dfd6fd6-f48c-11e5-8d88-73ab4ad30076.png)
 
 In case of port conflicts, edit the file(s): `./lib/${lang}/daemons.ini`
