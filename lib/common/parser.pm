@@ -1,6 +1,7 @@
 package common::parser;
 use Config::IniFiles;
 use Data::Dumper;
+use Dir::Self;
 use strict;
 use warnings;
 use Exporter qw(import);
@@ -34,7 +35,8 @@ sub run_daemon {
     my ($self, $daemon_name) = @_;
     my %daemon = %{$self->{daemons}{$daemon_name}};
     my $cmd = "$daemon{path} $daemon{args} $daemon{port} &";
-    system("flock -e -w 0.01 ./run/${daemon_name}_$daemon{port} -c '$cmd'") == 0
+    my $runfile = __DIR__ . "/run/${daemon_name}_$daemon{port}";
+    system("flock -e -w 0.01 $runfile -c '$cmd'") == 0
         or warn "[${daemon_name}_$self->{lang}]: Port $daemon{port} maybe unavailable! $?\n";
 }
 

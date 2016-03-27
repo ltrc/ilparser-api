@@ -1,5 +1,6 @@
 package hin::chunker;
 use Data::Dumper;
+use Dir::Self;
 use Exporter qw(import);
 use IPC::Run qw(run);
 use strict;
@@ -85,7 +86,7 @@ sub crf_test {
     my %par = @_;
     my $data = $par{'data'};
     my $result = "";
-    run ["/usr/local/bin/crf_test", "-m", "./lib/hin/chunker/models/300k_tokens.model"], \$data, \$result;
+    run ["/usr/local/bin/crf_test", "-m", __DIR__ . "/chunker/models/300k_tokens.model"], \$data, \$result;
     return $result;
 }
 

@@ -1,4 +1,5 @@
-use lib "./lib";
+use Dir::Self;
+use lib __DIR__ . "/lib";
 use Data::Dumper;
 use hin;
 use common::parser qw(get_parser initialize_langs);
