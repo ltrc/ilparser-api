@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 
 git submodule update --recursive --init
 git submodule foreach --recursive git pull origin master
