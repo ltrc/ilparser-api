@@ -1,8 +1,6 @@
 FROM            ubuntu:latest
 #ENV            HTTP_PROXY      http://proxyuser:proxypwd@proxy.server.com:8080
 #ENV            http_proxy      http://proxyuser:proxypwd@proxy.server.com:8080
-ENV            HTTP_PROXY      http://proxy.iiit.ac.in:8080
-ENV            http_proxy      http://proxy.iiit.ac.in:8080
 RUN             apt-get update && apt-get install -y \
                     autoconf \
                     cpanminus \
@@ -17,7 +15,6 @@ RUN             apt-get update && apt-get install -y \
                     python-pip \
                     && rm -rf /var/lib/apt/lists/*
 #RUN            git config --global http.proxy http://proxyuser:proxypwd@proxy.server.com:8080
-RUN            git config --global http.proxy http://proxy.iiit.ac.in:8080
 RUN             cpanm \
                     Data::Dumper \
                     Dir::Self \
