@@ -42,7 +42,8 @@ Tu run from pre-built tocker container, type:
 ```bash
 $ docker pull ltrc/ilparser-api:v1 
 $ docker run --name ilparser-api -dit ltrc/ilparser-api:v1
-$ docker inspect --format '{{ .NetworkSettings.IPAddress }}' ilparser-api #This will tell you the IP address of the container.
+#To find out the IP address of the container:
+$ docker inspect --format '{{ .NetworkSettings.IPAddress }}' ilparser-api 
 ```
 
 Example use of the API:
