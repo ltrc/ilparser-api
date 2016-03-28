@@ -38,6 +38,13 @@ To run the api server:
 $ perl api.pl prefork
 ```
 
+Tu run from pre-built tocker container, type:
+```bash
+$ docker pull ltrc/ilparser-api:v1 
+$ docker run --name ilparser-api -dit ltrc/ilparser-api:v1
+$ docker inspect --format '{{ .NetworkSettings.IPAddress }}' ilparser-api #This will tell you the IP address of the container.
+```
+
 Example use of the API:
 ```bash
 $ curl -s localhost:3000/parse --data lang=hin \
