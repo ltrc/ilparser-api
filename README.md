@@ -30,6 +30,7 @@ $ sudo ldconfig
 Setting up the repo:
 ```bash
 $ git clone https://github.com/ltrc/ilparser-api.git
+$ cd ilparser-api
 $ ./setup.sh
 ```
 
