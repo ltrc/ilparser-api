@@ -1,6 +1,8 @@
 # ilparser-api
 An API for Parsing Indic Languages
 
+>Note: This API runs the full dependency parser which can take, on an average, up to 2.6 seconds on a sentence of length 20 words.
+
 Installing Dependencies (Ubuntu):
 ```bash
 $ sudo -E apt-get install autoconf cpanminus gcc git libgdbm-dev libglib2.0-dev make python-numpy \
