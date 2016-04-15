@@ -48,9 +48,7 @@ $ docker run --name ilparser-api -dit ltrc/ilparser-api:v1
 #To find out the IP address of the container:
 $ docker inspect --format '{{ .NetworkSettings.IPAddress }}' ilparser-api 
 # Replace 172.17.0.2 below with the IP obtained from the above command.
-$ curl -s 172.17.0.2/parse --data lang=hin \
-    --data data="माना जाता है कि अमृतमंथन के बाद अमृत की कुछ बूँदें यहाँ गिरी थीं , इसलिए इसे ब्रह्मकुंड कहा जाता है ." | \
-    jq '.["dependencyparse-11"]' | \
+$ curl -s 172.17.0.2/parse --data lang=hin --data data=" देश के टूरिजम में राजस्थान एक अहम जगह रखता है।"
 ```
 
 Example use of the API:
@@ -93,3 +91,5 @@ Enter into the browser: `http://localhost:3000/parse?lang=hin&data=देश क
 ![PrettyPrint](https://cloud.githubusercontent.com/assets/1779189/14067826/0dfd6fd6-f48c-11e5-8d88-73ab4ad30076.png)
 
 In case of port conflicts, edit the file(s): `./lib/${lang}/daemons.ini`
+
+Note: Please make sure no proxy environment variables are present while contacting the server, if deployed locally.
