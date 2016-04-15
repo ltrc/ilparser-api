@@ -47,6 +47,10 @@ $ docker pull ltrc/ilparser-api:v1
 $ docker run --name ilparser-api -dit ltrc/ilparser-api:v1
 #To find out the IP address of the container:
 $ docker inspect --format '{{ .NetworkSettings.IPAddress }}' ilparser-api 
+# Replace 172.17.0.2 below with the IP obtained from the above command.
+$ curl -s 172.17.0.2/parse --data lang=hin \
+    --data data="माना जाता है कि अमृतमंथन के बाद अमृत की कुछ बूँदें यहाँ गिरी थीं , इसलिए इसे ब्रह्मकुंड कहा जाता है ." | \
+    jq '.["dependencyparse-11"]' | \
 ```
 
 Example use of the API:
